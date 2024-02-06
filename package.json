@@ -4,13 +4,11 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "build": "remix build",
+    "dev": "remix dev --manual",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/index.js",
-    "typecheck": "tsc",
-    "build": "npm run build:css && remix build",
-    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
-    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
-    "dev": "remix dev --manual"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@prisma/client": "5.9.1",
@@ -30,7 +28,6 @@
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "autoprefixer": "^10.4.17",
-    "concurrently": "^8.2.2",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
